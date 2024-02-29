@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+}
+/* Menú */
+.logo{
+    display: flex;
+    margin-left: 1em;
+    width: 50px;
+    height: auto;
+}
+header{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.icon{
+    padding: 1em;
+    float: left;
+    position: relative;
+}
+.menu{
+    padding: 0.4em 1em;
+    float: left;
+    position: relative;
+    display: none;  
+    /* top: 5px; */
+}
+.menu-t{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: block;
+}
+.menu::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    z-index: -1;
+}
+.menu:hover::before{
+    animation: fill 0.5s forwards;
+}
+/* Contenedor principal */
+.container{
+    width: 90%;
+    margin: 65px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+main{
+    text-align: justify;
+}
+.gift{
+    position: relative;
+    width: 90%;
+    display: block;
+    align-items: center;
+}
+.nmb{
+    display: flex;
+    position: absolute;
+    margin: auto;
+    top: 35%;
+    color: White;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: auto;
+    z-index: 1;
+}
+/* Login y Registro*/
+.contenedor_form{
+    width: 100%;
+    padding: 15px;
+}
+.formulario{
+    background: #fff;
+    margin-top: 100px;
+}
+.h1_form{
+    padding-top: 20px;
+    text-align: center;
+    color: #1a2537;
+    font-size: 48px;
+}
+.icon_form{
+    padding-top: 4px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+input[type="text"], input[type="password"], input[type="email"]{
+    text-align: center;
+    font-size: 24px;
+    width: 80%;
+    padding: 10px;
+    border: none;
+}
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.button_form{
+    border: none;
+    width: 100%;
+    font-size: 24px;
+    color: white;
+    background-color: #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button_form:hover{
+    background-color: cadetblue;
+}
+.p_form{
+    text-align: center;
+}
+.link_form{
+    text-decoration: none;
+    color: #1a2537;
+    font-weight: 600px;
+}
+.link_form:hover{
+    color: cadetblue;
+}
+@media(min-width:768px){
+    .formulario{
+        margin-top: 150px;
+        width: 500px;
+        margin: auto;
+        border-radius: 2%;
+    }
+} 
+@keyframes fill{
+    0% {
+        width: 0%;
+    }
+    60% {
+        width: 100%;
+        height: 4px;
+    }
+    100% {
+        border-radius: 10%;
+        width: 100%;
+        height: 100%;
+        background: hsl(226, 80%, 78%);
+    }
+}
+@media screen and (min-width:576px){
+    nav{
+        display: flex;
+    }
+    .menu{
+        display: inline-block;
+    }
+    .icon{
+        display: none;
+    }
+    .logo{
+        display: block;
+    }
+}
+@media screen and (max-width:576px){
+    .nmb{
+        display: none;
+    }
+}
+@media screen and (min-width:992px){
+    
+}
